@@ -1,0 +1,36 @@
+package com.health.entity;
+
+import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
+
+import java.time.LocalDateTime;
+
+/**
+ * 系统公告实体
+ *
+ * @author health-team
+ */
+@Data
+@TableName("announcement")
+public class Announcement {
+
+    @TableId(type = IdType.AUTO)
+    private Long id;
+
+    private String title;
+
+    private String content;
+
+    private Integer status;
+
+    private String publisher;
+
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
+
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime updateTime;
+
+    @TableLogic
+    private Integer deleted;
+}

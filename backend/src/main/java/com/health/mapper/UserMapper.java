@@ -1,0 +1,14 @@
+package com.health.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.health.entity.User;
+import org.apache.ibatis.annotations.Mapper;
+
+/**
+ * 用户数据访问层
+ *
+ * @author health-team
+ */
+@Mapper
+public interface UserMapper extends BaseMapper<User> {
+}
